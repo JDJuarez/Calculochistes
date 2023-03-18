@@ -1,0 +1,89 @@
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Menu */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* boton mobile */
+.icono-menu_hamburguesa, .nav-menu_mobile{
+    display: none;
+}
+
+/* propiedades del menu */
+.menu_main{
+    justify-content: flex-start;
+}
+
+/* separación del menu derecho e izquierdo */
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* separación de munu y logo */
+.nav-menu_left{
+    display: flex;
+    margin-left: 12px;
+}
+
+/* quitamos propiedades de lista */
+.nav-menu_left ul, .nav-menu_right ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* propiedades de las letras del menu */
+.nav-menu_left ul li a, .nav-menu_right ul li a{
+    text-decoration: none;
+    color: var(--white);
+    border: 1px solid var(--fondo_menu);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: var(--large);
+}
+
+/* animación al pasar mause por letras */
+.nav-menu_left ul li a:hover, .nav-menu_right ul li a:hover{
+    border: 1px solid var(--very-light-pink);
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Main */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* main{
+    min-height: calc(100vh - 80px - 96px);
+} */
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Tarjeta */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* section{ */
+    /* grid-template-columns: repeat(auto-fill, 300px); */
+/* } */
+/* detalles de los productos */
+.tarjeta{
+    margin: 24px;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* side */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.producto-detalles{
+    width: 40%;
+    min-width: 360px;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Pie de Página */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Otros */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* .inactive{
+    display: none;
+} */

@@ -1,0 +1,185 @@
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Aside */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* detalles de los productos */
+/* .producto-detalles{ */
+    .producto-detalles{
+        display: flex;
+        background-color: var(--white);
+        /* position: absolute; */
+        /* position: fixed; */
+        flex-direction: column;
+        /* top: 68px; */
+        right: 0;
+        width: 40%;
+        min-width: 300px;
+        z-index: 1;
+        /* overflow: scroll; */
+        /* overflow: hidden;  */
+        height: calc(100vh - 68px);
+        /* background-color: #2fb4cc; */
+        /* align-content: center; */
+    }
+    .imagencerrardetalles img{
+        width: 24px;
+        background-color: var(--white);
+        border-radius: 50%;
+    }
+    .imagencerrardetalles {
+        /* width: 24px; */
+        /* position: relative; */
+        /* top: 12px; */
+        /* left: 12px; */
+      }
+      .imagencerrardetalles:hover {
+        cursor: pointer;
+      }
+    
+      .foto-detalles_1, .foto-detalles_2, .foto-detalles_3{
+        display: flex;
+        /* width: 100%; */
+        /* height: 220px; */
+        /* object-fit: contain; */
+        /* object-fit: scale-down; */
+        justify-content: center;
+        align-items: center;
+        /* border-radius: 0 0 20px 20px; */
+        /* overflow: hidden; */
+        min-height: 400px;
+        /* background-color: #FF0000; */
+        /* z-index: 2; */
+        /* background-image: url("./img/Naruto_Uzumaki.webp"); */
+        /* max-width: 100%; */
+        /* max-height: 400px; */
+      }
+      #id-producto-detalles .foto-detalles_1 img {
+        /* max-width: 100%; */
+        /* max-height: 400px; */
+        user-select: none;
+        height: 100%;
+      }
+      #id-producto-detalles .foto-detalles_2 img {
+        /* max-width: 100%; */
+        /* max-height: 400px; */
+        user-select: none;
+        height: 100%;
+      }
+      #id-producto-detalles .foto-detalles_3 img {
+        /* max-width: 100%; */
+        /* max-height: 400px; */
+        user-select: none;
+        height: 100%;
+      }
+    
+      #id-producto-detalles .foto-detalles_1 img, #id-producto-detalles .foto-detalles_2 img, #id-producto-detalles .foto-detalles_3 img {
+        cursor: pointer;
+      }
+    
+      /* puntos de las imagenes */
+    .points {
+        display: flex;
+        justify-content: center;
+      }
+      /* .points > li {
+        background: var(--very-light-pink);
+        width: 8px;
+        height: 8px;
+        margin: 8px 6px;
+        border-radius: 50%;
+        list-style-type: none;
+        cursor: pointer;
+      } */
+      #date-aside{
+        margin-top: 12px;
+      }
+    
+      /* .points > li:hover {
+        background: var(--hospital-green);
+      } */
+    
+      .producto-informacion {
+        margin: 0px 20px 0 20px;
+      }
+      .producto-informacion div{
+        display: flex;
+        flex-direction: row;
+    
+      }
+      .producto-informacion p:nth-child(1) {
+        /* margin-top: 12px; */
+        text-align: right;
+        color: var(--very-light-pink);
+        font-size: var(--medium);
+        margin-top: 0;
+        margin-bottom: 16px;
+        justify-content: flex-end;
+        user-select: none;
+      }
+      .producto-informacion p:nth-child(2) {
+        font-weight: bold;
+        font-size: var(--large);
+        margin-top: 0;
+        margin-bottom: 4px;
+        color: var(--black);
+        text-align: center;
+        /* user-select: none; */
+      }
+      .producto-informacion p:nth-child(2):hover {
+        cursor: pointer;
+        text-decoration: underline;
+        /* user-select: none; */
+      }
+      .producto-informacion p:nth-child(3) {
+        font-size: var(--medium);
+        margin-top: 12px;
+        margin-bottom: 12px;
+        text-align: justify;
+      }
+    
+      .cerrar-aside {
+        font-size: var(--small);
+        /* margin-top: 12px; */
+        color: #2fb4cc;
+        margin-bottom: 16px;
+        text-align: center;
+        user-select: none;
+      }
+      .cerrar-aside:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    
+    
+    .botonverpagina{
+      font-size: var(--medium);
+      width: 100%;
+      display: inline-block;
+      padding: 10px;
+      margin-top: 10px;
+      transition: all 400ms ease;
+      text-decoration: none;
+      color: #2fb4cc;
+      text-align: center;
+      border: 1px solid #2fb4cc;
+      border-radius: 4px;
+      transition: all 400ms ease;
+      background: var(--white);
+      margin-bottom: 25px;
+      user-select: none;
+    }
+    .botonverpagina:hover{
+      background: #2fb4cc;
+      color: #fff;
+      cursor: pointer;
+    }
+    /* @media (max-width: 400px){
+      .producto-detalles{
+        width: 100%;
+        z-index: 1;
+      }
+      .foto-detalles_1 img {
+        width: calc(100% - 4px);
+        margin-left: 4px;
+      }
+    } */

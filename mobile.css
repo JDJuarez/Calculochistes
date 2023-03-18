@@ -1,0 +1,533 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --fondo_menu: #222222;
+    --Menu_Fondo: #364552;
+    --hospital-green: #acd9b2;
+    --text-input-field: #F7F7F7;
+    --very-light-pink: #C7C7C7;
+    --red: #FF0000;
+    --fondo_pagina: #efefef;
+
+    --small: 1.4rem;
+    --medium: 1.6rem;
+    --large: 1.8rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    flex-direction: column;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Menu*/
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* propiedades del menu */
+.menu_main{
+    display: flex;
+    /* display: none; */
+    position:fixed;
+    padding: 0 24px;
+    top: 0px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--fondo_menu);
+    height: 68px;
+    z-index: 3;
+}
+
+/* quitamos menu desktop */
+.nav-menu_left{
+    display: none;
+    user-select: none;
+}
+
+/* propiedades del boton menu mobile */
+.icono-menu_hamburguesa{
+    display: flex;
+    width: 52px;
+    height: 52px;
+    align-items: center;
+    user-select: none;
+}
+
+/* logo del menu */
+.logo_menu{
+    width: 120px;
+    border-radius: 8%;
+    user-select: none;
+}
+
+/* parte derecha del menu */
+.nav-menu_right{
+    display: flex;
+    display: none;
+    align-items: center;
+}
+
+/* Boton de notification */
+/* quitamos propiedades de lista */
+.nav-menu_right ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* user-select: none; */
+}
+
+.notification{
+    position: relative;
+}
+
+.notification_icono img{
+    display: flex;
+    width: 36px;
+    user-select: none;
+}
+
+/* letra */
+.notification_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--red);
+    border-radius: 50%;
+    font-size: var(--small);
+    font-weight: bold;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: var(--white);
+    user-select: none;
+}
+
+/* lista menu mobile */
+/* propiedades */
+.nav-menu_mobile{
+    display: flex;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    background-color: var(--fondo_menu);
+    padding: 24px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    flex-direction: column;
+    border-top: 1px solid var(--very-light-pink);
+}
+
+/* quitamos propiedades de lista */
+.nav-menu_mobile ul{
+    list-style: none;
+}
+
+.nav-menu_mobile ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.nav-menu_mobile ul:nth-child(2) {
+    margin-top: 24px;
+}
+
+.nav-menu_mobile ul li{
+    margin-bottom: 12px;
+}
+
+/* propiedades de letras */
+/* propiedades de las letras del menu */
+.nav-menu_mobile a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--large);
+    user-select: none;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Main*/
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+main{
+    display: flex;
+    /* display: none; */
+    flex-direction: row;
+    margin-top: 68px;
+    background-color: var(--fondo_pagina);
+    /* z-index: 1; */
+    min-height: calc(100vh - 80px - 96px);
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Tarjeta */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* .container{
+    display: grid;
+    width: 100%;
+    place-content: center;
+} */
+
+.container{
+  /* display: flex; */
+    display: grid;
+    /* display: none; */
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 320px);
+    place-content: center;
+    /* mar */
+}
+/* detalles de los productos */
+.tarjeta{
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    min-width: 220px;
+    /* right: ; */
+    /* left: 0; */
+}
+.tarjeta:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+  .foto-tarjeta_1, .foto-tarjeta_2, .foto-tarjeta_3{
+    display: flex;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    justify-content: center;
+  }
+  .foto-tarjeta_1 img {
+    /* display: flex; */
+    height: 220px;
+    user-select: none;
+  }
+  .foto-tarjeta_2 img {
+    height: 220px;
+    user-select: none;
+  }
+  .foto-tarjeta_3 img {
+    height: 220px;
+    user-select: none;
+  }
+
+  .foto-tarjeta_1 img:hover {
+    cursor: pointer;
+  }
+  .foto-tarjeta_2 img:hover {
+    cursor: pointer;
+  }
+  .foto-tarjeta_3 img:hover {
+    cursor: pointer;
+  }
+
+  /* puntos de las imagenes */
+.points-tarjeta {
+    display: flex;
+    justify-content: center;
+  }
+  .points-tarjeta > li {
+    background: var(--very-light-pink);
+    width: 8px;
+    height: 8px;
+    margin: 8px 6px 0px 6px;
+    border-radius: 50%;
+    list-style-type: none;
+    cursor: pointer;
+  }
+  .points-tarjeta > .point-tarjeta-active {
+    background: var(--hospital-green);
+  }
+  .points-tarjeta > li:hover {
+    background: var(--hospital-green);
+  }
+
+  .producto-tarjeta-nombre {
+    margin: 15px;
+    line-height: 1.5;
+  }
+  .producto-tarjeta-nombre p:nth-child(1) {
+    color: var(--very-light-pink);
+    font-size: var(--small);
+    margin-top: 0;
+    margin-bottom: 4px;
+    text-align: right;
+    user-select: none;
+  }
+  .producto-tarjeta-nombre p:nth-child(2) {
+    font-size: var(--medium);
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 400;
+    max-height: 48px;
+    overflow: hidden;
+  }
+  .producto-tarjeta-nombre p:nth-child(2):hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .producto-tarjeta-nombre a{
+    font-size: var(--medium);
+    width: 100%;
+    /* display: flex; */
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    transition: all 400ms ease;
+    text-decoration: none;
+    color: #2fb4cc;
+    text-align: center;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    user-select: none;
+  }
+  .producto-tarjeta-nombre a:hover{
+    background: #2fb4cc;
+    color: #fff;
+  }
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Aside */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* detalles de los productos */
+/* .producto-detalles{ */
+.producto-detalles{
+    display: flex;
+    background-color: var(--white);
+    position: absolute;
+    position: fixed;
+    flex-direction: column;
+    top: 68px;
+    right: 0;
+    width: 40%;
+    min-width: 300px;
+    z-index: 1;
+    overflow: scroll;
+    /* overflow: hidden;  */
+    height: calc(100vh - 68px);
+    /* background-color: #2fb4cc; */
+    /* align-content: center; */
+    /* margin-top: 1px; */
+}
+.imagencerrardetalles img{
+  position: absolute;
+    width: 24px;
+    background-color: var(--white);
+    border-radius: 50%;
+    user-select: none;
+}
+.imagencerrardetalles {
+  /* position: absolute; */
+    width: 24px;
+    position: relative;
+    top: 12px;
+    left: 12px;
+  }
+  .imagencerrardetalles:hover {
+    cursor: pointer;
+  }
+
+  .foto-detalles_1, .foto-detalles_2, .foto-detalles_3{
+    display: flex;
+    width: 100%;
+    height: 220px;
+    /* object-fit: contain; */
+    /* object-fit: scale-down; */
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 0 0 20px 20px; */
+    /* overflow: hidden; */
+    min-height: 320px;
+    /* background-color: #FF0000; */
+    /* z-index: 2; */
+    /* background-image: url("./img/Naruto_Uzumaki.webp"); */
+    /* max-width: 100%; */
+    /* max-height: 400px; */
+  }
+  #id-producto-detalles .foto-detalles_1 img {
+    max-width: 100%;
+    max-height: 320px;
+    user-select: none;
+    /* height: 100%; */
+  }
+  #id-producto-detalles .foto-detalles_2 img {
+    max-width: 100%;
+    max-height: 320px;
+    user-select: none;
+    /* height: 100%; */
+  }
+  #id-producto-detalles .foto-detalles_3 img {
+    max-width: 100%;
+    max-height: 320px;
+    user-select: none;
+    /* height: 100%; */
+  }
+
+  #id-producto-detalles .foto-detalles_1 img, #id-producto-detalles .foto-detalles_2 img, #id-producto-detalles .foto-detalles_3 img {
+    cursor: pointer;
+  }
+
+  /* puntos de las imagenes */
+.points {
+    display: flex;
+    justify-content: center;
+  }
+  /* .points > li {
+    background: var(--very-light-pink);
+    width: 8px;
+    height: 8px;
+    margin: 8px 6px;
+    border-radius: 50%;
+    list-style-type: none;
+    cursor: pointer;
+  } */
+  #date-aside{
+    margin-top: 12px;
+  }
+
+  /* .points > li:hover {
+    background: var(--hospital-green);
+  } */
+
+  .producto-informacion {
+    margin: 0px 20px 0 20px;
+  }
+  .producto-informacion div{
+    display: flex;
+    flex-direction: row;
+
+  }
+  .producto-informacion p:nth-child(1) {
+    /* margin-top: 12px; */
+    text-align: right;
+    color: var(--very-light-pink);
+    font-size: var(--medium);
+    margin-top: 0;
+    margin-bottom: 16px;
+    justify-content: flex-end;
+    user-select: none;
+  }
+  .producto-informacion p:nth-child(2) {
+    font-weight: bold;
+    font-size: var(--large);
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: var(--black);
+    text-align: center;
+    /* user-select: none; */
+  }
+  .producto-informacion p:nth-child(2):hover {
+    cursor: pointer;
+    text-decoration: underline;
+    /* user-select: none; */
+  }
+  .producto-informacion p:nth-child(3) {
+    font-size: var(--medium);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+
+  .cerrar-aside {
+    font-size: var(--small);
+    /* margin-top: 12px; */
+    color: #2fb4cc;
+    margin-bottom: 16px;
+    text-align: center;
+    user-select: none;
+  }
+  .cerrar-aside:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+
+.botonverpagina{
+  font-size: var(--medium);
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  transition: all 400ms ease;
+  text-decoration: none;
+  color: #2fb4cc;
+  text-align: center;
+  border: 1px solid #2fb4cc;
+  border-radius: 4px;
+  transition: all 400ms ease;
+  background: var(--white);
+  margin-bottom: 25px;
+  user-select: none;
+}
+.botonverpagina:hover{
+  background: #2fb4cc;
+  color: #fff;
+  cursor: pointer;
+}
+/* @media (max-width: 400px){
+  .producto-detalles{
+    width: 100%;
+    z-index: 1;
+  }
+  .foto-detalles_1 img {
+    width: calc(100% - 4px);
+    margin-left: 4px;
+  }
+} */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Pie de Página */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+footer {
+    display: flex;
+    background-color: var(--fondo_menu);
+    padding: 32px;
+    color: var(--white);
+    justify-content: space-between;
+    z-index: 2;
+}
+
+footer section{
+    display: flex;
+}
+
+footer p{
+    margin: 0;
+    font-size: var(--small);
+}
+
+footer a {
+    transition: color 0.3s ease;
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--small);
+}
+
+footer a:hover {
+    color: cornflowerblue;
+}
+
+footer section p{
+  cursor: default;
+}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Otros */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.inactive{
+    display: none;
+}
+.points-tarjeta > .point-active-color{
+  background: #2fb4cc;
+}
